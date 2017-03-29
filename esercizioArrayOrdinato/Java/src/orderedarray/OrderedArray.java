@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 
 /*
- * 
+ *
  * @author: Lorenzo Tabasso
  * @param <T>: type of the ordered array elements
  */
@@ -12,7 +12,7 @@ import java.util.Comparator;
 public class OrderedArray<T> {
 	private ArrayList<T> array = null;
 	private Comparator<? super T> comparator;
-	
+
 	/**
 	 *  It creates an empty ordered array and returns the created array.
 	 * It accepts as input a comparator implementing the precedent relation
@@ -20,26 +20,26 @@ public class OrderedArray<T> {
 	 * @param compatator: a comparator implementing the precedent relation
 	 * between the array elements.
 	 */
-	 
+
 	 public OrderedArray(Comparator<? super T> comparator){
 		 this.array = new ArrayList<>();
 		 this.comparator = comparator;
 	 } // OrderedArray
-	 
+
 	 /**
 	  * @return: true if and if this ordered array is empty
 	  */
 	  public boolean isEmpty(){
 		  return (this.array).isEmpty();
 	  } // isEmpty
-	  
+
 	  /**
 	  * @return: the number of elements currently stored in this ordered array
 	  */
 	  public int size(){
 		  return (this.array).size();
 	  } // size
-	  
+
 	  /**
 	   * It adds a new element in the ordered array in the right position
 	   * @param element: the element to be added
@@ -51,7 +51,7 @@ public class OrderedArray<T> {
 			int index = getIndexInsert(element);
 			(this.array).add(index, element);
 	   } // add
-	   
+
 	   /**
 	    * @param i: index of the element that should be returned
 	    * @return: the element at position i
@@ -62,7 +62,7 @@ public class OrderedArray<T> {
 				throw new OrderedArrayException("Index " + i + " is out of the array bounds");
 			return (this.array).get(i);
 		} // get
-		
+
 		// It returns the position where the element must be inserted
 		private int getIndexInsert(T element){
 			int index = 0;
@@ -78,4 +78,3 @@ public class OrderedArray<T> {
             return index;
 	   } // getIndexInsert
 } // class
-
