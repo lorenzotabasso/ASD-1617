@@ -1,12 +1,12 @@
 package orderedarray;
 
 /*
- * 
+ *
  * @author: Lorenzo Tabasso
  */
 
 public class OrderedArrayException extends Exception {
-	
+
 	/**
 	 * @param message: the message display when the exception is thrown
 	 */
@@ -14,4 +14,3 @@ public class OrderedArrayException extends Exception {
 		 super(message);
 	 } // OrderedArrayException
 } // class
-
