@@ -17,8 +17,8 @@ public class Tests {
     private Sorts Field1 = new Sorts(new Field1Comparator());
     private Sorts Field2 = new Sorts(new Field2Comparator());
     private Sorts Field3 = new Sorts(new Field3Comparator());
-    private String csv_small = "/Users/simonestella/Desktop/definitivo/caseautomobilistiche.csv";
-    private String csv_big = "/Users/simonestella/Desktop/definitivo/records.csv";
+    private String csv_small = ".../caseautomobilistiche.csv";
+    private String csv_big = ".../records.csv";
 
     public static void main (String[] args) {
         Result result = JUnitCore.runClasses(Tests.class);
