@@ -25,16 +25,16 @@ public class CSV {
                 if (el.length != 1) {
                     el[0] = el[0].substring (2, 6);
                     v = Integer.parseInt(el[0]);
-                    s = t.Cerca(v);
+                    s = t.search(v);
                     el[1] = el[1].substring (2, 6);
                     v = Integer.parseInt(el[1]);
-                    s.AggiungiFiglioSx(v);
+                    s.addChildL(v);
                     i = 2;
                     while (i < el.length) {
-                        s = t.Cerca(v);
+                        s = t.search(v);
                         el[i] = el[i].substring (2, 6);
                         v = Integer.parseInt(el[i]);
-                        s.AggiungiFratelloDx(v);
+                        s.addBrotherR(v);
                         i++;
                     }
                 }
@@ -43,7 +43,7 @@ public class CSV {
             br.close();
 
             long tf = System.currentTimeMillis();
-            System.out.println("Added " + t.dimensione() + " nodes in " + (float)(tf - ti)/1000 + " seconds.");
+            System.out.println("Added " + t.size() + " nodes in " + (float)(tf - ti)/1000 + " seconds.");
             return t;
         }
 

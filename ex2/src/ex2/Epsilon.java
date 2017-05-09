@@ -4,82 +4,82 @@ import java.util.*;
 
 public class Epsilon<T extends Comparable<T>> extends Tree<T> {
 
-    public Tree<T> padre;
-    public Tree<T> fratelloDx;
+    public Tree<T> parent;
+    public Tree<T> brotherR;
 
-    public Epsilon (Tree<T> padre, Tree<T> fratelloDx) {
-        this.padre = padre;
-        this.fratelloDx = fratelloDx;
+    public Epsilon (Tree<T> parent, Tree<T> brotherR) {
+        this.parent = parent;
+        this.brotherR = brotherR;
     }
 
 //--------------------------------------------------------------------------------------------------
 
-    public int dimensione() {
-        return this.fratelloDx.dimensione();
+    public int size() {
+        return this.brotherR.size();
     }
 
-    public int profondita() {
-        return this.fratelloDx.profondita();
+    public int depth() {
+        return this.brotherR.depth();
     }
 
-    public int profondita2() {
-        return this.fratelloDx.profondita2();
+    public int depth2() {
+        return this.brotherR.depth2();
     }
 
-    public int grado () {
-        return this.fratelloDx.grado();
+    public int grade () {
+        return this.brotherR.grade();
     }
 
-    public int grado2 () {
-        return this.fratelloDx.grado2();
+    public int grade2 () {
+        return this.brotherR.grade2();
     }
 
-    public int maxgrado() {
-        return this.fratelloDx.maxgrado();
+    public int maxGrade() {
+        return this.brotherR.maxGrade();
     }
 
-    public boolean binario() {
-        return this.fratelloDx.binario();
+    public boolean binary() {
+        return this.brotherR.binary();
     }
 
 //--------------------------------------------------------------------------------------------------
 
-    public void AggiungiFratelloDx (T elem) {
-        this.fratelloDx = new Branch<T> (this.padre, elem, new Leaf(), new Leaf());
+    public void addBrotherR (T elem) {
+        this.brotherR = new Branch<T> (this.parent, elem, new Leaf(), new Leaf());
     }
 
-    public void AggiungiFiglioSx (T elem) {
+    public void addChildL (T elem) {
         System.out.println("Errore: Non puoi aggiungere un figlio sinistro a Epsilon!\n");
         System.exit(0);
     }
 
-    public void AggiungiFiglioDx (T elem) {
+    public void addRightChild (T elem) {
         System.out.println("Errore: Non puoi aggiungere un figlio destro a Epsilon!\n");
         System.exit(0);
     }
 
-    public Tree<T> Cerca (T elem) {
-        return this.fratelloDx.Cerca(elem);
+    public Tree<T> search (T elem) {
+        return this.brotherR.search(elem);
     }
 
 //--------------------------------------------------------------------------------------------------
 
-    public Tree<T> BinarioRicercaBilanciato () {
-        return this.fratelloDx.BinarioRicercaBilanciato();
+    public Tree<T> BinarySearchTree () {
+        return this.brotherR.BinarySearchTree();
     }
 
-    public void ConvertiInArray (ArrayList<T> a) {
-        this.fratelloDx.ConvertiInArray(a);
+    public void convertToArray (ArrayList<T> a) {
+        this.brotherR.convertToArray(a);
     }
 
-    public void AggiungiNodiDa (List<T> a) {
-        this.fratelloDx.AggiungiNodiDa(a);
+    public void addNodesFrom (List<T> a) {
+        this.brotherR.addNodesFrom(a);
     }
 
 //--------------------------------------------------------------------------------------------------
 
     public String toString () {
-        return "(a dx) " + fratelloDx;
+        return "(a dx) " + brotherR;
     }
 
 }

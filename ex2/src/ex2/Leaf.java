@@ -4,66 +4,66 @@ import java.util.*;
 
 public class Leaf<T extends Comparable<T>> extends Tree<T> {
 
-    public int dimensione() {
+    public int size() {
         return 0;
     }
 
-    public int profondita() {
+    public int depth() {
         return 0;
     }
 
-    public int profondita2() {
+    public int depth2() {
         return 0;
     }
 
-    public int grado () {
+    public int grade () {
         return 0;
     }
 
-    public int grado2 () {
+    public int grade2 () {
         return 0;
     }
 
-    public int maxgrado() {
+    public int maxGrade() {
         return 0;
     }
 
-    public boolean binario() {
+    public boolean binary() {
         return true;
     }
 
 //--------------------------------------------------------------------------------------------------
 
-    public void AggiungiFratelloDx (T elem) {
+    public void addBrotherR (T elem) {
         System.out.println("Errore: Non puoi aggiungere un fratello a Leaf!\n");
         System.exit(0);
     }
 
-    public void AggiungiFiglioSx (T elem) {
+    public void addChildL (T elem) {
         System.out.println("Errore: Non puoi aggiungere un figlio sinistro a Leaf!\n");
         System.exit(0);
     }
 
-    public void AggiungiFiglioDx (T elem) {
+    public void addRightChild (T elem) {
         System.out.println("Errore: Non puoi aggiungere un figlio destro a Leaf!\n");
         System.exit(0);
     }
 
-    public Tree<T> Cerca (T elem) {
+    public Tree<T> search (T elem) {
         return null;
     }
 
 //--------------------------------------------------------------------------------------------------
 
-    public Tree<T> BinarioRicercaBilanciato () {
+    public Tree<T> BinarySearchTree () {
         return this;
     }
 
-    public void ConvertiInArray (ArrayList<T> a) {
+    public void convertToArray (ArrayList<T> a) {
 
     }
 
-    public void AggiungiNodiDa (List<T> a) {
+    public void addNodesFrom (List<T> a) {
         System.out.println("Errore: Non puoi aggiungere figli/fratelli a Leaf!\n");
         System.exit(0);
     }
