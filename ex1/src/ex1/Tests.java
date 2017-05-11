@@ -1,6 +1,5 @@
 package ex1;
 
-import java.util.Arrays;
 import org.junit.runner.JUnitCore;
 import org.junit.runner.Result;
 import org.junit.runner.notification.Failure;
