@@ -14,7 +14,7 @@ public class UnitTests {
 
     // SETTINGS ----------------------------------------------------------------
     private boolean readCsv = true;
-    private String csvPath = "/Users/simonestella/Desktop/ex1/records.csv";
+    private String csvPath = "/Users/simonestella/Desktop/ex1/records.csv"; // Path of the CSV file
     private int recordsToRead = 20000000;
     private boolean sortByField1 = true;
     private boolean sortByField2 = true;
